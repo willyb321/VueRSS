@@ -1,0 +1,20 @@
+@import ~bulma/bulma
+.spoilerbutton
+	display: block
+	margin: 5px 0
+
+.spoiler
+	overflow: hidden
+	background: #f5f5f5
+	> div
+		-webkit-transition: all 0.2s ease
+		-moz-transition: margin 0.2s ease
+		-o-transition: all 0.2s ease
+		transition: margin 0.2s ease
+
+.spoilerbutton
+	&[value="Show Summary"] + .spoiler > div
+		margin-top: -100%
+		display: none
+	&[value="Hide Summary"] + .spoiler
+		padding: 5px
