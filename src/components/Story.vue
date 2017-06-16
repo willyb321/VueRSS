@@ -53,7 +53,7 @@
 				this.error = this.post = null;
 				this.loading = true;
 				// replace getPost with your data fetching util / API wrapper
-				this.$http.get('/api/').then(response => {
+				this.$http.get(process.env.API_URL + '/').then(response => {
 					this.loading = false;
 					console.log(response);
 					this.post = response.data;

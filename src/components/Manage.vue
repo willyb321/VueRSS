@@ -64,7 +64,7 @@
 				this.error = this.post = null;
 				this.loading = true;
 				// replace getPost with your data fetching util / API wrapper
-				this.$http.get('/api/managefeed').then(response => {
+				this.$http.get(process.env.API_URL + '/managefeed').then(response => {
 					this.loading = false;
 					console.log(response);
 					this.post = response.data;
@@ -73,7 +73,7 @@
 				});
 			},
 			remove: function(event) {
-				this.$http.post('/api/remove', {toremove: event.target.id}).then(response => {
+				this.$http.post(process.env.API_URL + '/remove', {toremove: event.target.id}).then(response => {
 					this.loading = false;
 					console.log(response);
 					this.fetchData()
@@ -82,7 +82,7 @@
 				});
 			},
 			add: function(event) {
-				this.$http.post('/api/add', {url: event.target.children["0"].value}).then(response => {
+				this.$http.post(process.env.API_URL + '/add', {url: event.target.children["0"].value}).then(response => {
 					this.loading = false;
 					console.log(response);
 					this.fetchData()
