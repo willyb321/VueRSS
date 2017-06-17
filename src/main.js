@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import m8 from './getPost'
 
 Vue.config.productionTip = false;
 
@@ -12,16 +11,5 @@ new Vue({
 	el: '#app',
 	router,
 	template: '<App/>',
-	components: {App},
-	methods: {
-		getPost() {
-			return new Promise((resolve, reject) => {
-				m8().then(data => {
-					resolve(data);
-				}).catch(err => {
-					reject(err);
-				})
-			})
-		}
-	}
+	components: {App}
 });

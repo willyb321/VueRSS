@@ -28,7 +28,6 @@
 		</div>
 </template>
 <script>
-	import m8 from '../getPost'
 	import Vue from 'vue'
 
 	export default {
