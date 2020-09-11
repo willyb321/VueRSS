@@ -24,7 +24,7 @@
   "devDependencies": {
     "autoprefixer": "^6.3.3",
     "captain-git-hook": "~1.0.5",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.14.1",
     "postcss-cli": "^2.5.1",
     "rimraf": "^2.6.1"
   },
